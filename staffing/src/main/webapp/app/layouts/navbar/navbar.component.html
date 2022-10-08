@@ -1,9 +1,11 @@
 <nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
+<!--
       <span class="logo-img"></span>
+-->
       <span jhiTranslate="global.title" class="navbar-title">Staffing</span>
-      <span class="navbar-version">{{ version }}</span>
+      <!--<span class="navbar-version">{{ version }}</span>-->
     </a>
     <a
       class="navbar-toggler d-lg-none"
@@ -28,7 +30,7 @@
           </a>
         </li>
         <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
-        <li
+    <!--    <li
           *ngSwitchCase="true"
           ngbDropdown
           class="nav-item dropdown pointer"
@@ -43,9 +45,94 @@
             </span>
           </a>
           <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
-            <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="user-sopra"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
+              >
+                <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+                <span jhiTranslate="global.menu.entities.userSopra">User Sopra</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="equipe"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
+              >
+                <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+                <span jhiTranslate="global.menu.entities.equipe">Equipe</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="demande-conge"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
+              >
+                <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+                <span jhiTranslate="global.menu.entities.demandeConge">Demande Conge</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="projet"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
+              >
+                <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+                <span jhiTranslate="global.menu.entities.projet">Projet</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="competance"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
+              >
+                <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+                <span jhiTranslate="global.menu.entities.competance">Competance</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="demande"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
+              >
+                <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+                <span jhiTranslate="global.menu.entities.demande">Demande</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="responsable"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="collapseNavbar()"
+              >
+                <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+                <span jhiTranslate="global.menu.entities.responsable">Responsable</span>
+              </a>
+            </li>
+            &lt;!&ndash; jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here &ndash;&gt;
           </ul>
         </li>
+        -->
         <li
           *jhiHasAnyAuthority="'ROLE_ADMIN'"
           ngbDropdown
@@ -190,3 +277,18 @@
     </div>
   </div>
 </nav>
+<!-- The sidebar -->
+<div class="sidebar"*ngIf="account !== null">
+
+  <img class="sidebar-heading border-bottom bg-light" src="./content/images/sopra.png" />
+  <div class="list-group list-group-flush">
+
+    <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="user-sopra">user-sopra</a>
+    <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="equipe">equipe</a>
+    <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="demande-conge">demande-conge</a>
+    <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="user-sopra">Events</a>
+    <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="projet">projet</a>
+    <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="competance">competance</a>
+  </div>
+
+</div>

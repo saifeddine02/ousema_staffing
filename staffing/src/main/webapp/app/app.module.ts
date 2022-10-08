@@ -8,6 +8,8 @@ import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import dayjs from 'dayjs/esm';
 import { NgbDateAdapter, NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
+/* import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';     */              //api
 
 import { ApplicationConfigService } from 'app/core/config/application-config.service';
 import './config/dayjs';

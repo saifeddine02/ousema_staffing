@@ -48,6 +48,19 @@ public class CacheConfiguration {
             createCache(cm, tn.sopra.domain.User.class.getName());
             createCache(cm, tn.sopra.domain.Authority.class.getName());
             createCache(cm, tn.sopra.domain.User.class.getName() + ".authorities");
+            createCache(cm, tn.sopra.domain.UserSopra.class.getName());
+            createCache(cm, tn.sopra.domain.UserSopra.class.getName() + ".competances");
+            createCache(cm, tn.sopra.domain.UserSopra.class.getName() + ".demandes");
+            createCache(cm, tn.sopra.domain.UserSopra.class.getName() + ".usersmembers");
+            createCache(cm, tn.sopra.domain.UserSopra.class.getName() + ".usermembers");
+            createCache(cm, tn.sopra.domain.Equipe.class.getName());
+            createCache(cm, tn.sopra.domain.Equipe.class.getName() + ".equipeusers");
+            createCache(cm, tn.sopra.domain.DemandeConge.class.getName());
+            createCache(cm, tn.sopra.domain.Projet.class.getName());
+            createCache(cm, tn.sopra.domain.Projet.class.getName() + ".projectMenbers");
+            createCache(cm, tn.sopra.domain.Competance.class.getName());
+            createCache(cm, tn.sopra.domain.Demande.class.getName());
+            createCache(cm, tn.sopra.domain.Responsable.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

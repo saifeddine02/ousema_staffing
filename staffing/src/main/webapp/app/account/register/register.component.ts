@@ -78,4 +78,14 @@ export class RegisterComponent implements AfterViewInit {
       this.error = true;
     }
   }
+
+/*   save(): void {
+      this.isSaving = true;
+      const userSopra = this.userSopraFormService.getUserSopra(this.editForm);
+      if (userSopra.id !== null) {
+        this.subscribeToSaveResponse(this.userSopraService.update(userSopra));
+      } else {
+        this.subscribeToSaveResponse(this.userSopraService.create(userSopra));
+      }
+    } */
 }
